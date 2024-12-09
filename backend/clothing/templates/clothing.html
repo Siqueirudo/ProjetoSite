@@ -8,7 +8,7 @@
 {% block content %}
 <body>
     {% for cloth in cloths %}   
-        <h3>{{cloths.model}}</h3>
+        <h3>modelo:{{cloth.model}} - tamanho:{{cloth.size}} - valor:{{cloth.value}}</h3>
     {% endfor %}    
 </body>
 {% endblock %}

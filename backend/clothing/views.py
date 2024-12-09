@@ -4,4 +4,4 @@ from clothing.models import cloth
 # Create your views here.
 def loja_view(request):
     cloths = cloth.objects.all()
-    return render( request,'clothing.html',{'clothing': cloths })
+    return render( request,'clothing.html',{'cloths': cloths })
