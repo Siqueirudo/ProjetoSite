@@ -1,0 +1,37 @@
+#header {
+    background-color: #CCC;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 1px 10px #2c2c2c;
+    z-index: 99;
+    width: 100vw;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.menunav-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo img{
+    height: 60px;
+}
+
+.cart_login {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.menucart-button {
+    font-size: 20px;
+    cursor: pointer;
+}
