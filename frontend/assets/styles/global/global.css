@@ -1,2 +1,4 @@
+@import './partials/reset.css';
+@import './partials/patterns.css';
 @import './partials/header.css';
 @import './partials/footer.css';
