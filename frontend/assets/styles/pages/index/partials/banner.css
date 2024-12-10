@@ -1,0 +1,56 @@
+.banner-slide {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner-slide .slider {
+    height: 100%;
+    display: flex;
+    transition: all ease 0.5s;
+}
+
+.slider-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: inherit;
+}
+
+.slider-controls {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55vh;
+}
+
+.slider-control {
+    width: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    align-content: center;
+    text-align: center;
+}
+
+.slider-control i { 
+    color: #FAFAFA;
+    font-size: 30px;
+}
+
+.first {
+    background-image: url('../../../../images/layout/photo10.jpg');
+}
+
+.second {
+    background-image: url('../../../../images/layout/photo11.jpg');
+}
+
+.third {
+    background-image: url('../../../../images/layout/photo12.jpg');
+}
+
+.dark {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+}
