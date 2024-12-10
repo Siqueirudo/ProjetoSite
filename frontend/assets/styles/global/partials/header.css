@@ -1,7 +1,7 @@
 #header {
     background-color: #FFF;
     padding: 10px;
-    position: fixed;
+    position: sticky;
     top: 0;
     box-shadow: 0px 1px 10px #2c2c2c;
     z-index: 99;
@@ -23,12 +23,6 @@
 
 .logo img{
     height: 60px;
-}
-
-.cart_login {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
 }
 
 .menucart-button {
