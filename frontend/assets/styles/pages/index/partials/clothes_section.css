@@ -1,0 +1,33 @@
+.clothes_section {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.clothes_area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.clothes_item {
+    max-width: 300px;
+    margin: 0 auto 50px auto;
+}
+
+.clothes_item a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.clothes_item img {
+    width: 250px;
+    border: 1px solid #000;
+    border-bottom: none;
+}
+
+.clothes_item_details {
+    
+}
