@@ -1,0 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    border: none;
+    font-family: 'Montserrat', serif; /* 'Comfortaa' */
+}

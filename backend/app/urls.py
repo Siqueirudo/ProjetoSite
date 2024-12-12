@@ -10,5 +10,5 @@ from clothing.views import loja_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('loja/', loja_view, name='cloth_list'),
+    path('loja/', loja_view, name='cloth_list'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
