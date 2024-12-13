@@ -8,3 +8,4 @@ def loja_view(request):
     if search:
         cloths = cloths.filter(category__icontains=search).order_by('category')
     return render( request,'clothing.html',{'cloths': cloths })
+
