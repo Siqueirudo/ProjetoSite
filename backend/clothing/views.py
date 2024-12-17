@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from clothing.models import cloth
-from django.views.generic import ListView
+from django.views.generic import ListView,DetailView
 # Create your views here.
 class loja_view(ListView):
     model = cloth
@@ -17,3 +17,6 @@ class loja_view(ListView):
             Q(category__icontains=search))
         return cloths
     
+class lojadetailview(DetailView):
+    model = cloth
+    template_name = 'clothes_detail.html'

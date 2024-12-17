@@ -58,9 +58,10 @@
         </div>
 
         <div class="clothes_area">
-            {% for cloth in cloths %}    
+            {% for cloth in cloths %}  
+
                 <div class="clothes_item">
-                    <a href="">
+                    <a href="{% url 'cloth_detail' cloth.pk%}">
                     
                         <div class="clothes_item_img"><img src="{{ cloth.photo.url }}"> </div>
                         <div class="clothes_item_details">
