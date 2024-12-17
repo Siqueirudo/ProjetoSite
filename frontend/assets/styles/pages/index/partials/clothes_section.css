@@ -12,6 +12,7 @@
 
 .clothes_section h1 {
     text-align: center;
+    font-weight: 400;
 }
 
 .clothes_section .purple-line {
@@ -31,6 +32,7 @@
     max-width: 350px;
     margin: 0 auto 50px auto;
     box-shadow: 0 0 16px #CCC;
+    background-color: #FFF;
 }
 
 .clothes_item a{
@@ -54,13 +56,13 @@
 }
 
 .clothes_item_name {
-    font-family: 'Montserrat', serif;
+    font-family: 'Comfortaa', serif;
     font-size: 14px;
 }
 
 .clothes_item_price {
     margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #7f2bed;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
 }

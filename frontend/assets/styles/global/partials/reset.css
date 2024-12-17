@@ -4,5 +4,9 @@
     box-sizing: border-box;
     overflow-x: hidden;
     border: none;
-    font-family: 'Montserrat', serif; /* 'Comfortaa' */
+    font-family: 'monument extended', serif;
+}
+
+body {
+    background-color: #D9DCE5;
 }
