@@ -34,7 +34,7 @@
 /* Menu Area */
 
 #header_menu {
-    background-color: #CCC;
+    background-color: #D9DCE5;
     width: 20%;
     height: 100%;
     position: fixed; /* Alterado para fixed para garantir que o menu esteja acima de tudo */
@@ -53,4 +53,65 @@
     cursor: pointer;
     color: #000;
     padding: 10px 15px 5px 0;
+}
+
+#header_menu nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+#header_menu nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 20px;
+}
+
+#header_menu nav ul li a {
+    text-decoration: none;
+    font-family: 'Comfortaa', serif;
+    color: #000;
+    font-size: 18px;
+    font-style: italic;
+    transition: ease 0.3s;
+}
+
+#header_menu nav ul li a:hover {
+    color:#7833E9;
+}
+
+.menu_register {
+    padding: 30px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 7px #2c2c2c;
+}
+
+.menu_register a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu_register i {
+    font-size: 18px;
+    margin-right: 20px;
+    transition: ease 0.3s;
+}
+
+.menu_register i:hover {
+    color: #7833E9;
+}
+
+.menu_register span {
+    font-family: 'Comfortaa', serif;
+    font-weight: bold;
+    transition: ease 0.3s;
+}
+
+.menu_register span:hover {
+    color: #7833E9;
 }
