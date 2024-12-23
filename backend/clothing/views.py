@@ -10,11 +10,16 @@ class loja_view(ListView):
     def get_queryset(self):
         cloths = super().get_queryset().order_by('category')
         search = self.request.GET.get('search')
+        category = self.request.GET.get('category', '').strip()
         if search:
             cloths = cloth.objects.filter(
             Q(model__icontains=search) | 
             Q(value__icontains=search) | 
             Q(category__icontains=search))
+        if category:
+            category = category.replace('_', '/')
+            cloths = cloths.filter(category__iexact=category)  
+             
         return cloths
     
 class lojadetailview(DetailView):

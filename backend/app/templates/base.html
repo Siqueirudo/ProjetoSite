@@ -19,6 +19,33 @@
         <div class="logo"><img src="{% static 'images/logo/logo_synapse.png' %}" alt="Logo Synapse"/></div>
         <div class="menucart-button"><i class="fa-solid fa-cart-shopping"></i></div>
     </div><!--navbar-->
+
+    <div id="header_menu">
+      <button id="close_menu"><i class="fa-solid fa-xmark"></i></button>
+      <nav>
+          <ul>
+              <li class="menu_drop"><a href="#">Produtos <i class="fa-solid fa-chevron-down"></i></a>
+                  <div class="drop">
+                      <a href="{% url 'cloth_list' %}?category=camisas">Camisas</a>
+                      <a href="{% url 'cloth_list' %}?category=casacos">Casacos</a>
+                      <a href="{% url 'cloth_list' %}?category=Calcas">Calças/Bermudas</a>
+
+                  </div>
+              </li>
+              <li><a href="#">PROTOCOLO 001.2</a></li>
+              <li><a href="#">Lookbook</a></li>
+              <li><a href="#">Quem somos</a></li>
+              <li><a href="#">Contato</a></li>
+          </ul>
+
+          <div href="{% url 'login' %}" class="menu_register">
+              <a href="{% url 'login' %}">
+                  <i class="fa-solid fa-user"></i>
+                  <span>Fazer Login</span>
+              </a>
+          </div>
+      </nav>
+  </div><!--Header MENU-->
   </header>
 
   <main>
@@ -64,6 +91,8 @@
       </div><!--secondary_footer-->
     </div><!--black_filter-->
   </footer><!--footer-->
+
+<script src="{% static 'scripts/index/banner.js' %}"></script>
   
 </body>
 </html>
