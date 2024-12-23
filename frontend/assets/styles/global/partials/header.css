@@ -45,6 +45,12 @@
     flex-direction: column;
     overflow: hidden;
     z-index: 10;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+#header_menu.active {
+    transform: translateX(0);
 }
 
 #close_menu {
@@ -158,4 +164,5 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
+    display: none;
 }
