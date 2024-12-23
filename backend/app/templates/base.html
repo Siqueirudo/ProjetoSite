@@ -20,11 +20,13 @@
         <div class="menucart-button"><i class="fa-solid fa-cart-shopping"></i></div>
     </div><!--navbar-->
 
+    <div id="menu_overlay"></div><!-- Sobreposição -->
+
     <div id="header_menu">
       <button id="close_menu"><i class="fa-solid fa-xmark"></i></button>
       <nav>
           <ul>
-              <li class="menu_drop"><a href="#">Produtos <i class="fa-solid fa-chevron-down"></i></a>
+              <li class="menu_drop"><a href="{% url 'cloth_list' %}">Produtos <i class="fa-solid fa-chevron-down"></i></a>
                   <div class="drop">
                       <a href="{% url 'cloth_list' %}?category=camisas">Camisas</a>
                       <a href="{% url 'cloth_list' %}?category=casacos">Casacos</a>
@@ -93,6 +95,7 @@
   </footer><!--footer-->
 
 <script src="{% static 'scripts/index/banner.js' %}"></script>
+<script src="{% static 'scripts/header/menuopener.js' %}"></script>
   
 </body>
 </html>
