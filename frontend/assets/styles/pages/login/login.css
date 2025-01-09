@@ -1,0 +1,70 @@
+main {
+    height: calc(100vh - 85px);
+    background-image: url('../../../images/layout/photo1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100vw;
+    align-content: center;
+}
+
+
+.login-container {
+    background-color: #FFF;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #999;
+}
+
+.login-container .signin-side,
+.login-container .signup-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.signin-side {
+    border-right: 1px solid #EEE;
+}
+
+.signup-side {
+    border-left: 1px solid #EEE;
+}
+
+.login-container h1 {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container form label {
+    margin-top: 20px;
+}
+
+.login-container form label .text-input {
+    border: 1px solid #CCC;
+    box-shadow: inset 0 0 4px #CCC;
+    width: 100%;
+    padding: 10px 20px;
+    font-family: 'Montserrat', serif;
+    font-size: 18px;
+}
+
+.login-container form label .purple_button {
+    box-shadow: none;
+    font-family: 'monument extended', serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
