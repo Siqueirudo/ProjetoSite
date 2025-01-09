@@ -1,13 +1,72 @@
 {% extends "base.html" %}
-{%block content%}
-<form method="post">
-    {%csrf_token%}
+{% load static %}
+{% block content %}
 
-    <table>
-        {{ login_form.as_table }}
-    </table>
-    <input type="submit" value="entrar">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse</title>
+    <link rel="stylesheet" href="{% static 'styles\global\global.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/global/partials.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/pages/index/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/pages/login/login.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+    <main>
+       <div class="login-container">
+            <!--<div class="signin-side">
+                <h1>ENTRAR</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <label>
+                        Nome de usuário:<br/>
+                        <input type="text" class="text-input" name="name" />
+                    </label>
+                    <label>
+                        Senha:<br/>
+                        <input type="password" class="text-input" name="password" />
+                    </label>
+                    <label>
+                        <input type="submit" class="purple_button" value="Entrar" />
+                    </label>
+                </form>
+            </div><!-signin-side-->
 
-</form>
+            <div class="signup-side">
+                <h1>CADASTRE-SE</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ user_form.username.errors }}
+                    <label>
+                        Nome de usuário:<br/>
+                        <input type="text" class="text-input" name="username" />
+                    </label>
+                    {{user_form.username}}
+                    {{ user_form.email.errors }}
+                    <label>
+                        E-mail:<br/>
+                        <input type="text" class="text-input" name="email" />
+                    </label>
+                    {{user_form.email}}
+                    {{ user_form.password1.errors }}
+                    <label>
+                        Senha:<br/>
+                        <input type="password" class="text-input" name="password" />
+                    </label>
+                    {{user_form.password1}}
+                    <label>
+                        <input type="submit" class="purple_button" value="Cadastrar-se" />
+                    </label>
+                </form>
+            </div><!--signup-side-->
+        </div><!--login-container-->
+    </main>
 
-{%endblock%}
+    <script src="{% static 'scripts/index/banner.js' %}"></script>
+    <script src="{% static 'scripts/header/menuopener.js' %}"></script>
+</body>
+</html>
+{% endblock %}

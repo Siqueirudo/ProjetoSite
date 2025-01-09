@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse</title>
+    <link rel="stylesheet" href="{% static 'styles\global\global.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/global/partials.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/pages/index/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/pages/login/login.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+    
+    <main>
+        <div class="login-container">
+            <!-- LOGIN -->
+            <div class="signin-side">
+                <h1>ENTRAR</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    <label>
+                        Nome de usuário:<br/>
+                        <input type="text" class="text-input" name="username" required/>
+                    </label>
+                    
+                    <label>
+                        Senha:<br/>
+                        <input type="password" class="text-input" name="password" required/>
+                        {{user_form.password1}}
+                    </label>
+                    <label>
+                        <input type="submit" class="purple_button" value="Entrar" />
+                    </label>
+                </form>
+                {% if login_form.errors %}
+                    <div class="error-messages">
+                        <p>Nome de usuário ou senha incorretos.</p>
+                    </div>
+                {% endif %}
+            </div><!--signin-side-->
+    
+            <!-- REGISTRO -->
+            <div class="signup-side">
+                <h1>CADASTRE-SE</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="signup-side"></div>
+                        <label>Nome de usuário:<br/>
+</label>
+                        {{ user_form.username}}
+                    <div class="signup-side">
+                        <label>
+                            E-mail:<br/>
+                            <input type="email" class="text-input" name="email" required/>
+                        </label>
+                    <div class="signup-side">
+                        <label>
+                            Senha:<br/>
+                            <input type="password" class="text-input" name="password1" required/>
+                        </label>
+                        {{user_form.password1}}
+                    <div class="signup-side">     
+                        <label>
+                            Confirmar senha:<br/>
+                            <input type="password" class="text-input" name="password2" required/>
+                        </label>
+                        {{user_form.password2}}
+                    <div class="signup-side">
+                        <label>
+                        <input type="submit" class="purple_button" value="Cadastrar-se" />
+                        </label>
+                </form>
+                
+                 
+            </div><!--signup-side-->
+        </div><!--login-container-->
+    </main>
+
+
+          
+                
+
+            
+
+    <script src="{% static 'scripts/index/banner.js' %}"></script>
+    <script src="{% static 'scripts/header/menuopener.js' %}"></script>
+</body>
+</html>
+{% endblock %}
