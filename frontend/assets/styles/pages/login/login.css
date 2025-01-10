@@ -32,8 +32,29 @@ main {
     border-right: 1px solid #EEE;
 }
 
+.signin-side a {
+    color: #111;
+    font-size: 16px;
+    font-family: 'Montserrat', serif;
+    padding-top: 20px;
+    font-style: italic;
+    transition: 0.3s ease;
+}
+
+.signin-side a:hover {
+    color: #7833E9;
+}
+
 .signup-side {
     border-left: 1px solid #EEE;
+}
+
+.signup-side p,
+.signin-side p {
+    font-family: 'Montserrat', serif;
+    font-size: 14px;
+    margin-top: 20px;
+    color: rgb(175, 30, 30);
 }
 
 .login-container h1 {
