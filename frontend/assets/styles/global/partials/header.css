@@ -111,7 +111,7 @@
     transition: ease 0.3s;
 }
 
-.menu_register i:hover {
+.menu_register:hover a{
     color: #7833E9;
 }
 
@@ -119,10 +119,6 @@
     font-family: 'Comfortaa', serif;
     font-weight: bold;
     transition: ease 0.3s;
-}
-
-.menu_register span:hover {
-    color: #7833E9;
 }
 
 /* Menu Drop */
