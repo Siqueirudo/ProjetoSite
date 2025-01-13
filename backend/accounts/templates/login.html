@@ -16,57 +16,38 @@
 </head>
 <body>
     <main>
-       <div class="login-container">
-            <!--<div class="signin-side">
-                <h1>ENTRAR</h1>
-                <form method="post">
-                    {% csrf_token %}
-                    <label>
-                        Nome de usuário:<br/>
-                        <input type="text" class="text-input" name="name" />
-                    </label>
-                    <label>
-                        Senha:<br/>
-                        <input type="password" class="text-input" name="password" />
-                    </label>
-                    <label>
-                        <input type="submit" class="purple_button" value="Entrar" />
-                    </label>
-                </form>
-            </div><!-signin-side-->
-
-            <div class="signup-side">
-                <h1>CADASTRE-SE</h1>
-                <form method="post">
-                    {% csrf_token %}
-                    {{ user_form.username.errors }}
-                    <label>
-                        Nome de usuário:<br/>
-                        <input type="text" class="text-input" name="username" />
-                    </label>
+        <div class="login-container">
+            <h1>CADASTRE-SE</h1>
+            <form  method="post">
+                {% csrf_token %}
+                <div class="signin-side">
+                    {{user_form.username.errors}}
+                    <label >Nome de usuário:</label>
                     {{user_form.username}}
-                    {{ user_form.email.errors }}
-                    <label>
-                        E-mail:<br/>
-                        <input type="text" class="text-input" name="email" />
-                    </label>
-                    {{user_form.email}}
-                    {{ user_form.password1.errors }}
-                    <label>
-                        Senha:<br/>
-                        <input type="password" class="text-input" name="password" />
-                    </label>
+                </div>
+                <div class="signin-side">
+                    {{user_form.password1.errors}}
+                    <label>email:</label>
                     {{user_form.password1}}
-                    <label>
-                        <input type="submit" class="purple_button" value="Cadastrar-se" />
-                    </label>
-                </form>
-            </div><!--signup-side-->
-        </div><!--login-container-->
+                </div>
+                <div class="signin-side">
+                    {{user_form.password2.errors}}
+                    <label>senha:</label>
+                    {{user_form.password2}}
+                </div>
+                <div>
+                    <input type="submit" value="Cadastrar">
+                </div>
+                
+
+            </form>
+        </div>
     </main>
 
-    <script src="{% static 'scripts/index/banner.js' %}"></script>
-    <script src="{% static 'scripts/header/menuopener.js' %}"></script>
+<script src="{% static 'scripts/index/banner.js' %}"></script>
+<script src="{% static 'scripts/header/menuopener.js' %}"></script>
 </body>
 </html>
 {% endblock %}
+
+
