@@ -26,15 +26,20 @@
                     {{user_form.username}}
                 </div>
                 <div class="signin-side">
+                    <label>Email:</label>
+                    <input type="email" name="email" required> <!-- Campo adicional -->
+                </div>
+                <div class="signin-side">
                     {{user_form.password1.errors}}
-                    <label>email:</label>
+                    <label>senha:</label>
                     {{user_form.password1}}
                 </div>
                 <div class="signin-side">
                     {{user_form.password2.errors}}
-                    <label>senha:</label>
+                    <label>confirma senha:</label>
                     {{user_form.password2}}
                 </div>
+                
                 <div>
                     <input type="submit" value="Cadastrar">
                 </div>
