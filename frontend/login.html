@@ -50,7 +50,6 @@
 
     <main>
         <div class="login-container">
-            <div class="signin-side">
                 <h1>ENTRAR</h1>
                 <form method="POST">
                     <label>
@@ -61,37 +60,15 @@
                         Senha:<br/>
                         <input type="password" class="text-input" name="password" data-rules="required"/>
                     </label>
+
+                    <!--Aqui--><p>- Nome de usuário ou senha inválidos</p> <!--Exatamente nessa linha você vai colar o texto com a tag <p> para aplicar estilização-->
+                    
                     <label>
                         <input type="submit" class="purple_button" value="Entrar" />
                     </label>
                 </form>
-                <a href="">Esqueci minha senha</a>
-                <p>- Nome de usuário ou senha inválidos</p> <!--Exatamente nessa linha você vai colar o texto com a tag <p> para aplicar estilização-->
-            </div><!--signin-side-->
-
-            <div class="signup-side">
-                <h1>CADASTRE-SE</h1>
-                <form method="POST" class="register_validator">
-                    <label>
-                        Nome de usuário:<br/>
-                        <input type="text" class="text-input" name="name" data-rules="required|min=3"/>
-                    </label>
-                    <label>
-                        E-mail:<br/>
-                        <input type="text" class="text-input" name="email" data-rules="required"/>
-                    </label>
-                    <label>
-                        Senha:<br/>
-                        <input type="password" class="text-input" name="password" data-rules="required"/>
-                    </label>
-                    <label>
-                        <input type="submit" class="purple_button" value="Cadastrar-se" />
-                    </label>    
-                </form>
-                <p>- Nome de usuário inválido ou já cadastrado</p> <!--Exatamente nessa linha você vai colar o texto com a tag <p> para aplicar estilização-->
-                <p>- E-mail inválido ou já cadastrado</p> <!--Exatamente nessa linha você vai colar o texto com a tag <p> para aplicar estilização-->
-                <p>- A senha só será válida caso tenha no mínimo oito caracteres, dentre os caracteres deve conter no mínimo um número, uma letra maiúscula e um caractere especial como: # ! ? $</p> <!--Exatamente nessa linha você vai colar o texto com a tag <p> para aplicar estilização-->
-            </div><!--signup-side-->
+                <p><a href="">Esqueci minha senha</a></p>
+                <p>Ainda não possui uma conta? <a href="">Cadastre-se!</a></p>
         </div><!--login-container-->
     </main>
 
