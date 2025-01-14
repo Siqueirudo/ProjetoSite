@@ -18,32 +18,33 @@
     <main>
         <div class="login-container">
             <h1>CADASTRE-SE</h1>
-            <form  method="post">
+            <form  method="post" class="register_validator">
                 {% csrf_token %}
-                <div class="signin-side">
+                <div class="text-input">
                     {{user_form.username.errors}}
                     <label >Nome de usuário:</label>
                     {{user_form.username}}
-                
-                <div class="signin-side">
-                    <label>Email:</label>
-                    <input type="email" name="email" required> <!-- Campo adicional -->
                 </div>
-                <div class="signin-side">
+                
+                <div class="text-input">
+                    <label>Email:</label>
+                    <input type="email"  name="email" required> <!-- Campo adicional -->
+                </div>
+                <div class="text-input">
                     {{user_form.password1.errors}}
                     <label>senha:</label>
                     {{user_form.password1}}
                 </div>
-                <div class="signin-side">
-                    {{user_form.password2.errors}}
-                    <label>confirma senha:</label>
-                    {{user_form.password2}}
-                </div>
                 
-                <div class="signin-side">
+               
+                
+                <div class="register_validator">
                     <input type="submit" value="Cadastrar">
+
+
                 </div>
                 
+                <p>Já possui uma conta? <a href="{% url 'login' %}">Faça Login!</a></p>
 
             </form>
 

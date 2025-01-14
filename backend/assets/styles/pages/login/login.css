@@ -11,29 +11,13 @@ main {
 
 .login-container {
     background-color: #FFF;
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-start;
-    padding: 25px;
+    flex-direction: column;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: inset 0 0 10px #999;
-}
-
-.login-container .signin-side,
-.login-container .signup-side {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.signin-side {
-    border-right: 1px solid #EEE;
-}
-
-.signup-side {
-    border-left: 1px solid #EEE;
 }
 
 .login-container h1 {
@@ -58,9 +42,17 @@ main {
     padding: 10px 20px;
     font-family: 'Montserrat', serif;
     font-size: 18px;
+    margin-top: 10px;
 }
 
-.login-container form label .purple_button {
+.login-container form p {
+    font-family: 'Montserrat', serif;
+    font-size: 14px;
+    margin-top: 20px;
+    color: rgb(175, 30, 30);
+}
+
+.login-container form .purple_button {
     box-shadow: none;
     font-family: 'monument extended', serif;
     font-size: 14px;
@@ -68,3 +60,26 @@ main {
     letter-spacing: 1px;
 }
 
+.login-container form .register-btn {
+    max-width: 30%;
+    margin-top: 15px;
+}
+
+.login-container a {
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: 'Montserrat', serif;
+    color: #333;
+    font-weight: bold;
+    transition: ease 0.3s;
+}
+
+.login-container a:hover {
+    color: #7833E9;
+}
+
+.login-container p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-family: 'Montserrat', serif;
+}

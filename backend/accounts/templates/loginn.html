@@ -20,20 +20,27 @@
             <h2>Login</h2>
             <form method="post">
                 {% csrf_token %}
-                <div class="signin-side">
+                
                     {{ login_form.username.errors }}
                     <label>Nome de usuário:</label>
                     {{ login_form.username }}
-                </div>
-                <div class="signin-side">
+                
+                
                     {{ login_form.password.errors }}
                     <label>Senha:</label>
                     {{ login_form.password }}
-                </div>
-                <div>
-                    <input type="submit" value="Entrar">
-                </div>
+
+                    <p>- Nome de usuário ou senha inválidos</p>
+                
+                
+                    <input type="submit" class="purple_button" value="Entrar">
+                
+
+            </form>
+            <p><a href="">Esqueci minha senha</a></p>
+            <p>Ainda não possui uma conta? <a href="{% url 'register' %}">Cadastre-se!</a></p>
         </div>
+
     </main>
 
 <script src="{% static 'scripts/index/banner.js' %}"></script>
