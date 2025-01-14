@@ -17,24 +17,26 @@
 <body>
     <main>
         <div class="login-container">
-            <h2>Login</h2>
+            <h1>ENTRAR</h1>
             <form method="post">
                 {% csrf_token %}
                 
                     {{ login_form.username.errors }}
-                    <label>Nome de usuário:</label>
-                    {{ login_form.username }}
+                    <label>Nome de usuário:<br/>
+                    <input type="text" id="username" name="username" class="text-input"/>
+                    
+                    </label>
                 
                 
                     {{ login_form.password.errors }}
-                    <label>Senha:</label>
-                    {{ login_form.password }}
-
-                    <p>- Nome de usuário ou senha inválidos</p>
+                    <label>Senha:<br/>
+                    <input type="password" id="password" name="password" class="text-input"/>
+                    </label>
+                   
                 
-                
+                    <label>
                     <input type="submit" class="purple_button" value="Entrar">
-                
+                    </label>
 
             </form>
             <p><a href="">Esqueci minha senha</a></p>

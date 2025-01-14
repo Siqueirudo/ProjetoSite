@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% if user_form.non_field_errors %}
+    <div class="error-message">
+        {{ user_form.non_field_errors.0 }}
+    </div>
+{% endif %}
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse</title>
+    <link rel="stylesheet" href="{% static 'styles\global\global.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/global/partials.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/pages/index/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/pages/login/login.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+    <main>
+        <div class="login-container">
+            <h1>CADASTRE-SE</h1>
+            <form  method="post" class="register_validator">
+                {% csrf_token %}
+                
+                    
+                    <label >Nome de usuário:
+                    <input type="text" id="username" name="username" class="text-input" required>
+                    </label>
+
+                    {% if user_form.username.errors %}
+                    <p> {{ user_form.username.errors.0 }} </p>
+                    {% endif %}
+                
+                
+                    <label>Email:
+                    <input type="email" class="text-input"  name="email" required> <!-- Campo adicional -->
+                    </label>
+                    {% if email_error %}
+                    <p> {{ email_error }} </p>
+                    {% endif %}
+                
+                
+                    
+                    <label>senha:
+                    <input type="password" id="password1" name="password1" class="text-input" required>
+                    </label>    
+                    {% if user_form.password1.errors %}
+                    <p> {{ user_form.password1.errors.0 }} </p>
+                    {% endif %}
+                
+               
+                
+                
+                    <input type="submit" class="purple_button register-btn" value="Cadastrar">
+
+
+                
+                
+
+            </form>
+            <p>Já possui uma conta? <a href="{% url 'login' %}">Faça Login!</a></p>
+            
+        </div>
+    </main>
+
+<script src="{% static 'scripts/index/banner.js' %}"></script>
+<script src="{% static 'scripts/header/menuopener.js' %}"></script>
+</body>
+</html>
+{% endblock %}
+
+

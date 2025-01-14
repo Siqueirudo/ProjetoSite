@@ -2,23 +2,27 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login
-
+from django.contrib.auth.models import User
+from django.contrib import messages
 
 
 def register_view(request):
-    if request.method == "POST":
-        user_form = UserCreationForm(request.POST)
-        if user_form.is_valid():
-            # Salva o usuário sem confirmar o commit
-            user = user_form.save(commit=False)
-            # Captura o email do POST e atribui ao campo email do usuário
-            user.email = request.POST.get('email')
-            user.save()  # Agora salva o objeto usuário com o email
-            return redirect('cloth_list')  # Redireciona para a página desejada
-    else:
-        user_form = UserCreationForm()
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password1 = request.POST.get('password1')
 
-    return render(request, 'login.html', {'user_form': user_form})
+        # Verifica se o usuário já existe
+        if User.objects.filter(username=username).exists():
+            messages.error(request, "O nome de usuário já está em uso.")
+            return render(request, 'register.html')
+
+        # Criação do usuário
+        user = User.objects.create_user(username=username, email=email, password=password1)
+        messages.success(request, "Cadastro realizado com sucesso! Faça login.")
+        return redirect('cloth_list')
+
+    return render(request, 'register.html')
 
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
