@@ -25,7 +25,7 @@ def register_view(request):
                 return render(request, 'register.html')
 
             # Criação do usuário
-            User.objects.create_user(username=username, email=email, password=password1)
+            user = User.objects.create_user(username=username, email=email, password=password1)
             user.save()
 
             # Autentica e faz login automaticamente
@@ -35,7 +35,9 @@ def register_view(request):
                 messages.success(request, "Cadastro realizado e login efetuado com sucesso!")
                 return redirect('cloth_list')
 
-                       
+            messages.error(request, "Erro ao autenticar o usuário após o registro.")
+            return render(request, 'register.html')
+
         except Exception as e:
             messages.error(request, f"Ocorreu um erro: {e}")
             return render(request, 'register.html')
