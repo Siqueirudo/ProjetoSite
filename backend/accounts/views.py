@@ -16,19 +16,26 @@ def register_view(request):
         try:
             # Verifica se o nome de usuário já existe
             if User.objects.filter(username=username).exists():
-                messages.error(request, "O nome de usuário já está em uso.")
+                messages.error(request, "O nome de usuário já está em uso.", extra_tags='user_error')
                 return render(request, 'register.html')
 
             # Verifica se o e-mail já existe
             if User.objects.filter(email=email).exists():
-                messages.error(request, "O e-mail já está em uso.")
+                messages.error(request, "O e-mail já está em uso.", extra_tags='email_error')
                 return render(request, 'register.html')
 
             # Criação do usuário
             User.objects.create_user(username=username, email=email, password=password1)
-            messages.success(request, "Cadastro realizado com sucesso!")
-            return redirect('cloth_list')
+            user.save()
 
+            # Autentica e faz login automaticamente
+            user = authenticate(request, username=username, password=password1)
+            if user is not None:
+                login(request, user)
+                messages.success(request, "Cadastro realizado e login efetuado com sucesso!")
+                return redirect('cloth_list')
+
+                       
         except Exception as e:
             messages.error(request, f"Ocorreu um erro: {e}")
             return render(request, 'register.html')

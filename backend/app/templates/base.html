@@ -39,13 +39,23 @@
               <li><a href="#">Quem somos</a></li>
               <li><a href="#">Contato</a></li>
           </ul>
+          
+          
+          {% if not user.is_authenticated %}
+            <div href="{% url 'register' %}" class="menu_register">
+                <a href="{% url 'register' %}">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Fazer Login</span>
+                </a>
+            </div>
+          {% endif %}
 
-          <div href="{% url 'register' %}" class="menu_register">
-              <a href="{% url 'register' %}">
-                  <i class="fa-solid fa-user"></i>
-                  <span>Fazer Login</span>
-              </a>
-          </div>
+          {% if user.is_authenticated%}
+            <div href="{% url 'logout' %}" class="menu_register">
+              <a href="{% url 'logout' %}">
+                <i class="fa-solid fa-user"></i>
+                <span>logout</span>
+          {% endif %}
       </nav>
   </div><!--Header MENU-->
   </header>
