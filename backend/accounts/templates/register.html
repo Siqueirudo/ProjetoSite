@@ -1,11 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-{% if user_form.non_field_errors %}
-    <div class="error-message">
-        {{ user_form.non_field_errors.0 }}
-    </div>
-{% endif %}
+
 
 
 <!DOCTYPE html>
@@ -24,6 +20,7 @@
     <main>
         <div class="login-container">
             <h1>CADASTRE-SE</h1>
+            
             <form  method="post" class="register_validator">
                 {% csrf_token %}
                 
@@ -32,10 +29,15 @@
                     <input type="text" id="username" name="username" class="text-input" required>
                     </label>
 
-                    {% if user_form.username.errors %}
-                    <p> {{ user_form.username.errors.0 }} </p>
-                    {% endif %}
-                
+                    <p>{% if messages %}
+                            <ul>
+                                {% for message in messages %}
+                                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}</p>
+
+                   
                 
                     <label>Email:
                     <input type="email" class="text-input"  name="email" required> <!-- Campo adicional -->

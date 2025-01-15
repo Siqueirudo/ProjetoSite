@@ -32,6 +32,14 @@
                     <label>Senha:<br/>
                     <input type="password" id="password" name="password" class="text-input"/>
                     </label>
+
+                    <p>{% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                                <li class="{{ message.tags }}">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}</p>
                    
                 
                     <label>

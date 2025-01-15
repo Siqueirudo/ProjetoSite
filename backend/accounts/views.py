@@ -1,9 +1,10 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import auth
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login,logout
 from django.contrib.auth.models import User
 from django.contrib import messages
+
 
 
 def register_view(request):
@@ -12,21 +13,30 @@ def register_view(request):
         email = request.POST.get('email')
         password1 = request.POST.get('password1')
 
-        # Verifica se o usuário já existe
-        if User.objects.filter(username=username).exists():
-            messages.error(request, "O nome de usuário já está em uso.")
-            return render(request, 'register.html')
+        try:
+            # Verifica se o nome de usuário já existe
+            if User.objects.filter(username=username).exists():
+                messages.error(request, "O nome de usuário já está em uso.")
+                return render(request, 'register.html')
 
-        # Criação do usuário
-        user = User.objects.create_user(username=username, email=email, password=password1)
-        messages.success(request, "Cadastro realizado com sucesso! Faça login.")
-        return redirect('cloth_list')
+            # Verifica se o e-mail já existe
+            if User.objects.filter(email=email).exists():
+                messages.error(request, "O e-mail já está em uso.")
+                return render(request, 'register.html')
+
+            # Criação do usuário
+            User.objects.create_user(username=username, email=email, password=password1)
+            messages.success(request, "Cadastro realizado com sucesso!")
+            return redirect('cloth_list')
+
+        except Exception as e:
+            messages.error(request, f"Ocorreu um erro: {e}")
+            return render(request, 'register.html')
 
     return render(request, 'register.html')
 
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.forms import AuthenticationForm
+
+
 
 def login_view(request):
     if request.method == "POST":
@@ -46,12 +56,23 @@ def login_view(request):
                 login(request, user)
                 return redirect('cloth_list')
             else:
-                # Adicionando uma mensagem de erro personalizada
-                login_form.add_error(None, "Usuário ou senha inválidos.")
+               # Verifica se o usuário existe
+                if not User.objects.filter(username=username).exists():
+                    messages.error(request, "Usuário não encontrado.")
+                else:
+                    messages.error(request, "Senha incorreta.")
+        else:
+            messages.error(request, "Nome de usuario ou senha invalidos.") 
     else:
         # Inicializando um formulário vazio para requisições GET
         login_form = AuthenticationForm()
     
     return render(request, 'loginn.html', {'login_form': login_form})
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('cloth_list')
+
 
 
