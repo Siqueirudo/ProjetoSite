@@ -1,1 +1,7 @@
 @import url('./partials/mainproduct.css');
+
+body {
+    background-image: url('../../../images/layout/photo12.jpg');
+    background-size: cover;
+    background-position: center;
+}
