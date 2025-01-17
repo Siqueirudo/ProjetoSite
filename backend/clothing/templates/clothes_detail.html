@@ -22,9 +22,15 @@
       <!--IMAGEM GRANDONA--><img id="current-image" src="{{ cloth.photo1.url }}" alt="Imagem Principal">
       </div><!--main-image-->
       <div class="thumbnails">
+        {% if cloth.photo1 %}
       <!--IMAGEM PEQUENA 1--><img class="thumbnail" src="{{ cloth.photo1.url }}" alt="Imagem 1">
+        {% endif %}
+        {% if cloth.photo2 %}
       <!--IMAGEM PEQUENA 2--><img class="thumbnail" src="{{ cloth.photo2.url }}" alt="Imagem 2">
+        {% endif %}
+        {% if cloth.photo3 %}
       <!--IMAGEM PEQUENA 3--><img class="thumbnail" src="{{ cloth.photo3.url }}" alt="Imagem 3">
+        {% endif %}
       </div><!--thumbnails-->
   </div><!--mainproduct-photos-->
   <div class="mainproduct-details">
