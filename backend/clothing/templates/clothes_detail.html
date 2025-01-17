@@ -1,87 +1,61 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
-  <style>
-    .car-card {
-      background-color: #e3e1e1;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      transition: all 0.3s ease;
-      max-width: 500px;
-      margin: 20px auto 0;
-      margin-bottom: 20px;
-    }
+{% csrf_token %}
 
-    .car-card:hover {
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      transform: translateY(-2px);
-    }
 
-    .car-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse</title>
+<link rel="stylesheet" href="{% static 'styles/global/global.css' %}">
+<link rel="stylesheet" href="{% static 'styles/pages/productpage/productpage.css' %}">
 
-    .car-card h2 {
-      font-size: 1.5rem;
-      margin: 10px;
-    }
 
-    .car-card p {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
+</head>
+<body>
+<section id="mainproduct">
+  <div class="mainproduct-photos">
+      <div class="main-image">
+      <!--IMAGEM GRANDONA--><img id="current-image" src="{{ cloth.photo1.url }}" alt="Imagem Principal">
+      </div><!--main-image-->
+      <div class="thumbnails">
+      <!--IMAGEM PEQUENA 1--><img class="thumbnail" src="{{ cloth.photo1.url }}" alt="Imagem 1">
+      <!--IMAGEM PEQUENA 2--><img class="thumbnail" src="{{ cloth.photo2.url }}" alt="Imagem 2">
+      <!--IMAGEM PEQUENA 3--><img class="thumbnail" src="{{ cloth.photo3.url }}" alt="Imagem 3">
+      </div><!--thumbnails-->
+  </div><!--mainproduct-photos-->
+  <div class="mainproduct-details">
+  <!--NOME DO PRODUTO--><h1>{{ cloth.model }}</h1>
+  <!--PREÇO DO PRODUTO--><p class="price">R$ {{cloth.value}}</p>
+      
+      <div class="sizegroup">
+          <p>Tamanho:</p>
+          <div class="sizes">
+          <!--TAMANHOS--><span class="size" data-size="P">P</span>
+          <!--TAMANHOS--><span class="size" data-size="M">M</span>
+          <!--TAMANHOS--><span class="size" data-size="G">G</span>
+          <!--TAMANHOS--><span class="size" data-size="GG">GG</span>
+          </div><!--sizes-->
+      </div><!--sizegroup-->
 
-    .buttons-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
+  <!--BOTÃO DE COMPRA--><button class="purple_button">Adicionar ao Carrinho</button>
 
-    .btn {
-      display: inline-block;
-      background-color: #0096c7;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
-      margin: 0 10px;
-    }
+      <div class="mainproduct-aboutus">
+          <p><b>EXPLORANDO A ESSÊNCIA:</b> A Synapse Supply atua no setor de techwear streetwear, destacando-se por ser gerenciada por uma IA chamada Cortex, que simboliza inovação e futurismo. A marca é única ao transformar cada peça em um manifesto, transmitindo mensagens provocativas que incitam senso crítico e questionamento das normas sociais. Funcionando como uma sinapse, conecta ideias e pessoas, criando uma comunidade de indivíduos que desafiam o normal. Esta abordagem estratégica define a Synapse Supply como mais do que uma marca de moda, mas um movimento de crítica e reflexão.</p>
+      </div>
+  </div><!--mainproduct-details-->
+</section><!--mainproduct-->
 
-    .btn:hover {
-      background-color: #108eb8;
-    }
 
-    .btn-danger {
-      background-color: #d9534f;
-      text-decoration: none !important;
-    }
 
-    .btn-danger:hover {
-      background-color: #d2221c;
-    }
 
-    .error-message {
-      color: #d9534f;
-      font-size: 14px;
-      margin-top: 5px;
-    }
+<script src="{% static 'assets/scripts/header/menuopener.js' %}"></script>
+<script src="{% static 'assets/scripts/productpage/productpage.js' %}"></script>
+</body>
+</html>
 
-    a {
-      text-decoration: none !important;
-    }
-  </style>
-  <div class="car-card">
-      <img src="{{ object.photo.url }}" alt="{{ object.model }}">
-      <h2>{{ object.model }}</h2>
-      <p><strong>Preço:</strong> R$ {{ object.value }}</p>
-  </div>
+
 {% endblock %}

@@ -20,7 +20,10 @@ class cloth(models.Model):
     size = models.CharField(max_length=6,choices=SIZE_CHOICES)
     value = models.FloatField(blank=True, null=True)
     amount = models.IntegerField(blank=True, null=True)
-    photo = models.ImageField(upload_to='cars/',blank=True, null=True)
+    photo1 = models.ImageField(upload_to='cars/',blank=True, null=True)
+    photo2 = models.ImageField(upload_to='cars/',blank=True, null=True)
+    photo3 = models.ImageField(upload_to='cars/',blank=True, null=True)
+    
 
     def __str__(self):
         return self.model

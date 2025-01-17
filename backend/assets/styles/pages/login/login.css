@@ -58,9 +58,6 @@ main {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
-}
-
-.login-container form .register-btn {
     max-width: 30%;
     margin-top: 15px;
 }
