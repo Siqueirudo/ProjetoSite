@@ -1,7 +1,7 @@
 /* Slide Area */
 
 .banner-slide {
-    height: 100vh;
+    height: calc(100vh - 75px);
     overflow: hidden;
 }
 
