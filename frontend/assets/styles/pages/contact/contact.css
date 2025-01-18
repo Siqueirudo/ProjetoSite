@@ -1,13 +1,13 @@
 #contact {
     background-image: url('../../../images/layout/photo1.jpg');
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 75px);
     align-content: center;
 }
 
 .contact-content {
     max-width: 1280px;
     margin: auto;
-    padding: 75px;
+    padding: 75px 30px;
     display: flex;
     flex-direction: column;
     justify-content: Center;
@@ -24,15 +24,15 @@
 
 .contact-title h1 {
     letter-spacing: 2px;
-    font-size: 45px;
+    font-size: 36px;
     font-weight: 400;
 }
 
 .contact-title .purple-line {
     margin-top: 10px;
-    background-color:#7f2bed;
-    width: 150px;
-    height: 10px;
+    background-color:#7833E9;
+    width: 100px;
+    height: 7px;
 }
 
 .contact-body {
@@ -47,7 +47,7 @@
     line-height: 40px;
     text-align: center;
     color: #333;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .contact-body-links {
@@ -58,7 +58,7 @@
 }
 
 .contact-body-links a {
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     color: #000;
@@ -71,6 +71,6 @@
 }
 
 .contact-body-links i {
-    font-size: 40px;
+    font-size: 36px;
     margin-right: 20px;
 }
