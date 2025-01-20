@@ -1,0 +1,49 @@
+#whoweare {
+    background-image: url('../../../images/layout/photo1.jpg');
+    min-height: calc(100vh - 75px);
+}
+/**/
+.whoweare-content {
+    max-width: 1280px;
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #999;
+}
+
+.whoweare-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whoweare-title h1 {
+    letter-spacing: 2px;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.whoweare-title .purple-line {
+    margin-top: 10px;
+    background-color:#7833E9;
+    width: 100px;
+    height: 7px;
+}
+
+.whoweare-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.whoweare-body p {
+    letter-spacing: 1px;
+    line-height: 40px;
+    text-align: justify;
+    color: #333;
+    font-size: 16px;
+}
