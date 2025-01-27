@@ -47,7 +47,7 @@
     line-height: 40px;
     text-align: center;
     color: #333;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .contact-body-links {
@@ -58,7 +58,7 @@
 }
 
 .contact-body-links a {
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     color: #000;
@@ -71,6 +71,6 @@
 }
 
 .contact-body-links i {
-    font-size: 36px;
+    font-size: 32px;
     margin-right: 20px;
 }
