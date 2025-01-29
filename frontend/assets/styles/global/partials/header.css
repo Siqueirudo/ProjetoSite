@@ -35,7 +35,7 @@
 /* Menu Area */
 
 #header_menu {
-    background-color: #D9DCE5;
+    background-color: #FFF;
     width: 20%;
     height: 100%;
     position: fixed; /* Alterado para fixed para garantir que o menu esteja acima de tudo */
@@ -162,4 +162,125 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
+}
+
+/* Carrinho */
+
+/* Sobreposição do carrinho */
+#cart_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semitransparente */
+    z-index: 9; /* Abaixo do carrinho */
+    display: none; /* Escondido inicialmente */
+}
+
+/* Carrinho retrátil */
+#cart_menu {
+    background-color: #fff;
+    width: 30%; /* Ajuste conforme necessário */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -30%; /* Escondido fora da tela */
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 10; /* Acima da sobreposição */
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+/* Carrinho ativo */
+#cart_menu.active {
+    transform: translateX(-100%);
+}
+
+/* Botão de fechar */
+#close_cart {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+    padding: 10px;
+}
+
+/* Conteúdo do carrinho */
+
+#cart_menu h2 {
+    margin-top: -30px;
+}
+
+.cart_item_group {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    overflow-y: scroll;
+    margin-top: 20px;
+}
+
+.cart_item {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245);
+}
+
+.cart_item_img {
+    border: 1px solid #eee;
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 20px;
+}
+
+.cart_item_img img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.cart_item_content {
+    margin-top: 30px;
+    text-align: left;
+    flex: 2;
+}
+
+.cart_item_name {
+    font-family: 'Comfortaa', serif;
+    font-size: 18px;
+}
+
+.cart_item_price {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.cart_item i {
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+.buy_button {
+    background-color:#7833E9;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    transition: ease 1s;
+}
+
+.buy_button:hover {
+    background-color: #5811d7;
+    transform: scale(1.02);
 }
