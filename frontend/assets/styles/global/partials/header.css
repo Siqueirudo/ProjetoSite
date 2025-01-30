@@ -215,6 +215,7 @@
 
 #cart_menu h2 {
     margin-top: -30px;
+    z-index: -1;
 }
 
 .cart_item_group {
@@ -235,14 +236,14 @@
 .cart_item_img {
     border: 1px solid #eee;
     box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.2);
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 125px;
+    max-height: 125px;
     margin-right: 20px;
 }
 
 .cart_item_img img{
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 125px;
+    max-height: 125px;
 }
 
 .cart_item_content {
@@ -253,19 +254,19 @@
 
 .cart_item_name {
     font-family: 'Comfortaa', serif;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .cart_item_price {
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .cart_item i {
     font-size: 24px;
     cursor: pointer;
-    margin-top: 30px;
-    margin-right: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .buy_button {
