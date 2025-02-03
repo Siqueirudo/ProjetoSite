@@ -137,3 +137,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Personalizando o assunto do e-mail
+PASSWORD_RESET_SUBJECT = "Solicitação de recuperação de senha"
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "emailtesedjango@gmail.com"  # Substitua pelo seu e-mail
+EMAIL_HOST_PASSWORD = "qzhu akqv nhsz knjd"  # Coloque a senha correta ou uma App Password do Google
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# Ajustando o assunto e corpo do e-mail de recuperação de senha
+PASSWORD_RESET_SUBJECT = "Solicitação de Redefinição de Senha - Synapse"
+PASSWORD_RESET_EMAIL_BODY = """
+Olá, {{ user.username }}!
+
+Recebemos uma solicitação para redefinir sua senha. Para continuar, clique no link abaixo:
+
+{{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+
+Se você não solicitou a redefinição de senha, por favor, ignore este e-mail.
+"""
