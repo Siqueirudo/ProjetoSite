@@ -26,6 +26,11 @@ main {
     letter-spacing: 2px;
 }
 
+.login-container em {
+    font-size: 14px;
+    font-family: 'Montserrat', serif;
+}
+
 .login-container form {
     display: flex;
     flex-direction: column;
@@ -69,6 +74,17 @@ main {
     color: #333;
     font-weight: bold;
     transition: ease 0.3s;
+}
+
+.login-container a.purple_button {
+    color: #FFF;
+    text-decoration: none;
+    width: 25%;
+    font-family: 'monument extended', serif;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 20px;
 }
 
 .login-container a:hover {
