@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse</title>
+    <link rel="stylesheet" href="assets/styles/global/global.css"/>
+    <link rel="stylesheet" href="assets/styles/pages/payment/payment.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+    <header id="header">
+        <div class="navbar">
+            <div class="menunav-button"><i class="fa-solid fa-bars"></i></div>
+            
+            <div class="logo"><a href="index.html"><img src="assets/images/logo/logo_synapse.png"/></a></div>
+
+            <div class="menucart-button"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div><!--navbar-->
+
+        <div id="menu_overlay"></div><!-- Sobreposição -->
+
+        <div id="header_menu">
+            <button id="close_menu"><i class="fa-solid fa-xmark"></i></button>
+            <nav>
+                <ul>
+                    <li class="menu_drop"><a href="#">Produtos <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="drop">
+                            <a href="#">Camisas</a>
+                            <a href="#">Casacos</a>
+                            <a href="#">Calças/Bermudas</a>
+                        </div>
+                    </li>
+                    <li><a href="#">PROTOCOLO 001.2</a></li>
+                    <li><a href="#">Lookbook</a></li>
+                    <li><a href="whoweare.html">Quem somos</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+
+                <div href="#" class="menu_register">
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Fazer Login</span>
+                    </a>
+                </div>
+            </nav>
+        </div><!--Header MENU-->
+
+        <!-- Sobreposição do carrinho -->
+    <div id="cart_overlay"></div>
+
+    <!-- Carrinho retrátil -->
+    <div id="cart_menu">
+        <button id="close_cart"><i class="fa-solid fa-xmark"></i></button>
+        <h2>Seu Carrinho</h2>
+        <div class="cart_item_group">
+            <div class="cart_item">
+                <div class="cart_item_img">
+                    <img src="assets/images/products/top/classover_blacktee_front.jpg" />
+                </div><!--cart_item_img-->
+
+                <div class="cart_item_content">
+                    <div class="cart_item_name">ClassOver Blacktee</div>
+                    <div class="cart_item_price">R$ 120,00</div>
+                </div><!--cart_item_content-->
+                
+                <i class="fa-regular fa-trash-can"></i>
+            </div><!--cart_item-->
+
+            <div class="cart_item">
+                <div class="cart_item_img">
+                    <img src="assets/images/products/top/classover_blacktee_front.jpg" />
+                </div><!--cart_item_img-->
+
+                <div class="cart_item_content">
+                    <div class="cart_item_name">ClassOver Blacktee</div>
+                    <div class="cart_item_price">R$ 120,00</div>
+                </div><!--cart_item_content-->
+                
+                <i class="fa-regular fa-trash-can"></i>
+            </div><!--cart_item-->
+
+        </div><!--cart_item_group-->
+
+        <a href="" class="buy_button">COMPRAR</a>
+
+    </div><!-- Carrinho -->
+    </header>
+
+    <section id="payment">
+        
+        <div class="payment-content">
+            <div class="payment-form">
+                <h1>DETALHES DE COBRANÇA</h1>
+                <form method="POST">
+                    <div class="complete-name">
+                        <input type="text" class="" placeholder="Nome"/>
+                        <input type="text" class="" placeholder="Sobrenome"/>
+                    </div><!--complete-name-->
+                    <input type="number" class="" placeholder="CPF"/>
+                    <input type="date" class="" placeholder="Data de Nascimento"/>
+                    <div class="location-group">
+                        <input type="text" class="" placeholder="CEP"/>
+                        <input type="text" class="" placeholder="Nome da rua"/>
+                    </div><!--location-group-->
+                    <div class="location-group">
+                        <input type="text" class="" placeholder="Número"/>
+                        <input type="text" class="" placeholder="Complemento(Opcional)"/>
+                    </div><!--location-group-->
+                    <div class="location-group">
+                        <input type="text" class="" placeholder="Bairro"/>
+                        <input type="text" class="" placeholder="Cidade"/>
+                    </div><!--location-group-->
+                    <input type="text" class="" placeholder="Estado"/>
+                    <input type="text" class="" placeholder="Telefone"/>
+                </form><!--form-->
+            </div><!--payment-form-->
+
+            <div class="payment-price">
+                
+            </div><!--payment-price-->
+        </div><!--payment-content-->
+
+    </section><!--payment-->
+
+    <footer id="footer">
+        
+        <div class="black_filter">
+            <div class="primary_footer">
+                <div class="footer_slogan">
+                    <p>Cada peça é um manifesto, provocando reflexão e questionamento das normas sociais. Somos um movimento que conecta ideias e pessoas, como sinapses no sistema nervoso</p>
+                    <div class="footer_socials">
+                        <a href="#footer"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#footer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#footer"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#footer"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#footer"><i class="fa-brands fa-pinterest"></i></a>
+                    </div><!--footer_socials-->
+                </div><!--footer_slogan-->
+
+                <div class="footer_newsletter">
+                    <h2 class="footer-title">Newsletter</h2>
+                    <p>Assine nossa newsletter e fique por dentro de todas as novidades!</p>
+                    <form method="POST">
+                    <input type="text" class="news-input" placeholder="Email" />
+                    <input type="submit" class="purple_button" value="Enviar" />
+                    </form>
+                </div><!--Footer NEWSLETTER-->
+
+                <div class="footer_support">
+                    <h2 class="footer-title">Suporte</h2>
+                    <div class="footer_topics">
+                        <a href="contact.html"><span><i class="fa-solid fa-angle-right"></i> Central de atendimento</span></a>
+                        <a href="trade.html"><span><i class="fa-solid fa-angle-right"></i> Trocas e devoluções</span></a>
+                    </div><!--footer_topics-->
+                </div><!--footer_support-->
+            </div><!--primary_footer-->
+
+            <div class="secondary_footer">
+                <span>Synapse Supply &copy; - 2024. Todos os direitos reservados.</span>
+                <span>Sinapses de um sistema nervoso.</span>
+            </div><!--secondary_footer-->
+        </div><!--black_filter-->
+    </footer><!--footer-->
+
+    <script src="assets/scripts/header/menuopener.js"></script>
+</body>
+</html>
