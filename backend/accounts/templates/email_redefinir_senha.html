@@ -1,0 +1,10 @@
+
+<p>Olá,</p>
+<p>Você solicitou a redefinição da sua senha. Clique no link abaixo para definir uma nova senha:</p>
+<p>
+    
+    <a href="{{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}">
+        Redefinir minha senha
+    </a>
+</p>
+<p>Se você não solicitou isso, ignore este e-mail.</p>

@@ -4,6 +4,8 @@ from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login,logout
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.contrib.auth.views import PasswordResetView
+from django.urls import reverse_lazy
 
 
 
@@ -84,4 +86,10 @@ def logout_view(request):
     return redirect('cloth_list')
 
 
+
+class CustomPasswordResetView(PasswordResetView):
+    template_name = "password_reset.html"  # Formulário para inserir o e-mail
+    email_template_name = "email_redefinir_senha.html"  # Template do e-mail enviado
+    subject_template_name = "email_assunto_redefinir_senha.txt"  # Assunto do e-mail
+    success_url = reverse_lazy("password_reset_done")  # Página de sucesso após envio
 
