@@ -1,0 +1,68 @@
+#whoweare {
+    background-image: url('../../../images/layout/photo1.jpg');
+    min-height: calc(100vh - 75px);
+}
+/**/
+.whoweare-content {
+    max-width: 1280px;
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    box-shadow: inset 0 0 10px #999;
+}
+
+.whoweare-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whoweare-title h1 {
+    letter-spacing: 2px;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.whoweare-title .purple-line {
+    margin-top: 10px;
+    background-color:#7833E9;
+    width: 100px;
+    height: 7px;
+}
+
+.whoweare-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.whoweare-body p {
+    letter-spacing: 1px;
+    line-height: 40px;
+    text-align: justify;
+    color: #222;
+    font-size: 14px;
+}
+
+.whoweare-person {
+    margin: auto;
+    margin-top: 40px;
+}
+
+.person-desc {
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222;
+}
+
+.person-image {
+    margin-top: 10px;
+    border: 4px solid #000;
+    box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.7), 0 0 16px rgba(0, 0, 0, 0.7);
+}

@@ -37,8 +37,8 @@
               </li>
               <li><a href="#">PROTOCOLO 001.2</a></li>
               <li><a href="#">Lookbook</a></li>
-              <li><a href="#">Quem somos</a></li>
-              <li><a href="#">Contato</a></li>
+              <li><a href="{% url 'whoweare' %}">Quem somos</a></li>
+              <li><a href="{% url 'contact' %}">Contato</a></li>
           </ul>
           
           
@@ -59,6 +59,38 @@
           {% endif %}
       </nav>
   </div><!--Header MENU-->
+
+  <div id="cart_overlay"></div>
+
+<!-- Carrinho retrátil -->
+<div id="cart_menu">
+    <button id="close_cart"><i class="fa-solid fa-xmark"></i></button>
+    <h2>Seu Carrinho</h2>
+    
+    <div class="cart_item_group">
+        {% for item in cart_items %}
+            <div class="cart_item">
+                <div class="cart_item_img">
+                    <img src="{{ cloth.photo1.url }}" alt="{{ item.name }}" />
+                </div><!--cart_item_img-->
+
+                <div class="cart_item_content">
+                    <div class="cart_item_name">{{cloth.model}}</div>
+                    <div class="cart_item_price">R$ {{cloth.value}}0</div>
+                </div><!--cart_item_content-->
+                
+                <a href="{% url 'remove_from_cart' item.id %}">
+                    <i class="fa-regular fa-trash-can"></i>
+                </a>
+            </div><!--cart_item-->
+        {% empty %}
+            <p>Seu carrinho está vazio.</p>
+        {% endfor %}
+    </div><!--cart_item_group-->
+
+    <a href="#" class="buy_button">COMPRAR</a>
+  </div> <!-- Carrinho -->
+
   </header>
 
   <main>

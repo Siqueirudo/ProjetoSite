@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 from clothing.views import loja_view,lojadetailview
 from accounts.views import register_view, login_view, logout_view
 from django.contrib.auth import views as auth_views
+from django.views.generic import TemplateView
 
 
 urlpatterns = [
@@ -16,7 +17,9 @@ urlpatterns = [
     path('register', register_view, name='register'),
     path('login/',login_view, name='login'),
     path('loja/categoria/<str:category>/', loja_view.as_view(), name='cloth_category'),
-    # Outras URLs do seu projeto
+    path('whoweare', TemplateView.as_view(template_name='whoweare.html'), name='whoweare'),
+    path('contact', TemplateView.as_view(template_name='contact.html'), name='contact'),
+    
     path('password_reset/', auth_views.PasswordResetView.as_view(template_name='password_reset_form.html'), name='password_reset'),
     path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='password_reset_done.html'), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='password_reset_confirm.html'), name='password_reset_confirm'),
