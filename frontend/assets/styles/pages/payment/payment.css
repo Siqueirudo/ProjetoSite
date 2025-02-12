@@ -27,6 +27,7 @@
 .payment-form form input {
     border: 1px solid #999;
     padding: 10px 20px;
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .payment-form form .input-group {
@@ -34,8 +35,68 @@
     justify-content: space-between;
 }
 
-
-
 .payment-price {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Itens do Carrinho para compra */
+
+.payment-price-item{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.payment-item-img {
+    max-height: 125px;
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.payment-item-img img {
+    max-height: 125px;
+    border: 1px solid #CCC;
+}
+
+.payment-item-img span {
+    margin-top: 30px;
+    font-size: 14px;
+    font-family: 'Montserrat', serif;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* Subtotal, Frete e Total */
+
+.payment-item-details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.item-details-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.item-details-group span {
+    font-family: 'Montserrat', serif;
+    font-size: 16px;
+}
+
+.item-details-group h3 {
+    font-family: 'Montserrat', serif;
+    font-weight: 700;
+    font-size: 18px;
 }
