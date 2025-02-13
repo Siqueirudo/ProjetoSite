@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synapse</title>
+  {% load static %}
+  <!-- Arquivos CSS -->
+  <link rel="stylesheet" href="{% static 'styles/global/global.css' %}"/>
+  <link rel="stylesheet" href="{% static 'styles\global\partials' %}"/>
+  <link rel="stylesheet" href="{% static 'styles/pages/index/index.css' %}"/>
+  <link rel="stylesheet" href="{% static 'styles/pages/productpage/productpage.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/pages/contact/contact.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/pages/login/login.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/pages/payment/payment.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/pages/trade/trade.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/pages/whoweare/whoweare.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/pages/lookbook/lookbook.css' %}">
+
+  <section id="lookbook">
+    <div class="lookbook-title">
+        <h1>Lookbook</h1>
+        <div class="purple-line"></div>
+    </div><!--lookbook-title-->
+
+    <div class="grid-gallery">
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo1.jpg' %}" /> </div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo2.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo3.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo4.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo5.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo6.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo7.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo8.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo9.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo10.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo11.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo12.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo13.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo14.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo15.jpg' %}"/></div>
+        <div class="grid-item"><img src="{% static 'assets/images/layout/photo16.jpg' %}"/></div>
+    </div>        
+    
+</section><!--lookbook-->
+
+
+<script src="{% static 'scripts/index/banner.js' %}"></script>
+<script src="{% static 'scripts/header/menuopener.js' %}"></script>
+  
+</body>
+</html>
+{% endblock %}
