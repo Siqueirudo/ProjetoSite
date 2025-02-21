@@ -66,3 +66,21 @@
     font-weight: 400;
     color: #000;
 }
+
+@media (min-width: 800px) and (max-width: 1280px) { /*Monitores Menores*/
+    .clothes_area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 450px) and (max-width: 800px) { /*TABLETS*/
+    .clothes_area {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 450px) { /*CELULARES*/
+    .clothes_area {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

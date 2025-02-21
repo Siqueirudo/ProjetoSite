@@ -141,3 +141,87 @@
     font-family: 'monument extended', serif;
     text-shadow: 0px 2px 10px rgba(0,0,0, 1);
 }
+
+@media (min-width: 800px) and (max-width: 1280px) { /*Monitores Menores*/
+    .slider-content h2 em {
+        background-color: rgba(120,51,233, 0.3);
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    .slider-image.second .slider-content h1 {
+        font-size: 36px;
+    }
+    
+    .slider-image.second .slider-content h3 {
+        font-size: 14px;
+    }
+
+    .slider-image.third .slider-content h1 {
+        font-size: 36px;
+    }
+    
+    .slider-image.third .slider-content h3 {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 800px) { /*TABLETS*/
+    .slider-content h2 em {
+        background-color: rgba(120,51,233, 0.3);
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .slider-image.second .slider-content h1 {
+        font-size: 30px;
+        margin-left: 40px;
+    }
+    
+    .slider-image.second .slider-content h3 {
+        font-size: 12px;
+        margin-left: 40px;
+    }
+
+    .slider-image.third .slider-content h1 {
+        font-size: 30px;
+    }
+    
+    .slider-image.third .slider-content h3 {
+        font-size: 12px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 450px) { /*CELULARES*/
+    .slider-content h3 {
+        font-size: 14px;
+    }
+    
+    .slider-content h2 {
+        font-size: 16px;
+    }
+    
+    .slider-content h2 em {
+        font-size: 18px;
+    }
+
+    .slider-image.second .slider-content h1 {
+        font-size: 30px;
+        margin-left: 40px;
+    }
+    
+    .slider-image.second .slider-content h3 {
+        font-size: 12px;
+        margin-left: 40px;
+    }
+
+    .slider-image.third .slider-content h1 {
+        font-size: 30px;
+    }
+    
+    .slider-image.third .slider-content h3 {
+        font-size: 12px;
+        margin-right: 40px;
+    }
+}
