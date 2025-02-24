@@ -196,10 +196,12 @@
 @media (max-width: 450px) { /*CELULARES*/
     .slider-content h3 {
         font-size: 14px;
+        text-align: center;
     }
     
     .slider-content h2 {
         font-size: 16px;
+        text-align: center;
     }
     
     .slider-content h2 em {
@@ -209,19 +211,23 @@
     .slider-image.second .slider-content h1 {
         font-size: 30px;
         margin-left: 40px;
+        text-align: left;
     }
     
     .slider-image.second .slider-content h3 {
         font-size: 12px;
         margin-left: 40px;
+        text-align: left;
     }
 
     .slider-image.third .slider-content h1 {
         font-size: 30px;
+        text-align: left;
     }
     
     .slider-image.third .slider-content h3 {
         font-size: 12px;
         margin-right: 40px;
+        text-align: left;
     }
 }

@@ -285,3 +285,91 @@
     background-color: #5811d7;
     transform: scale(1.02);
 }
+
+@media (min-width: 800px) and (max-width: 1280px) { /*Monitores Menores*/
+    #header_menu {
+        width: 50%;
+    }
+
+    #cart_menu {
+        width: 50%; /* Ajuste conforme necessário */
+        right: -50%; /* Escondido fora da tela */
+    }
+}
+
+@media (min-width: 450px) and (max-width: 800px) { /*TABLETS*/
+    #header_menu {
+        width: 100%;
+    }
+
+    .menu_drop .drop {
+        max-height: 300px;
+        margin-top: 2rem;
+    }
+
+    #cart_menu {
+        width: 100%; /* Ajuste conforme necessário */
+        right: -100%; /* Escondido fora da tela */
+    }
+
+    .cart_item {
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    .cart_item_img {
+        max-width: 100px;
+        max-height: 100px;
+        margin-right: 20px;
+    }
+    
+    .cart_item_img img{
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 450px) { /*CELULARES*/
+    #header_menu {
+        width: 100%;
+    }
+
+    .menu_drop .drop {
+        max-height: 300px;
+        margin-top: 2rem;
+    }
+
+    #cart_menu {
+        width: 100%; /* Ajuste conforme necessário */
+        right: -100%; /* Escondido fora da tela */
+    }
+
+    .cart_item_img {
+        max-width: 100px;
+        max-height: 100px;
+        margin-right: 20px;
+    }
+    
+    .cart_item_img img{
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+    .cart_item_content {
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .cart_item_name {
+        font-size: 14px;
+    }
+    
+    .cart_item_price {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    .cart_item i {
+        font-size: 20px;
+    }
+}

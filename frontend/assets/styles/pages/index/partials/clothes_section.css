@@ -83,4 +83,12 @@
     .clothes_area {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .clothes_item {
+        max-width: 250px;
+    }
+
+    .clothes_item img {
+        width: 250px;
+    }
 }

@@ -136,3 +136,124 @@
 .secondary_footer span {
     font-family: 'Montserrat', serif;;
 }
+
+@media (min-width: 800px) and (max-width: 1280px) { /*Monitores Menores*/
+    .primary_footer {
+        max-width: 800px;
+    }
+    
+    .footer_slogan p {
+        font-size: 12px;
+    }
+    
+    .footer_newsletter p{
+        font-size: 12px;
+    }
+    
+    .footer_topics a {
+        font-size: 12px;
+    }
+
+    .secondary_footer {
+        margin-top: 20px;
+        max-width: 800px;
+        padding: 0px 20px;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 800px) { /*TABLETS*/
+    .primary_footer {
+        max-width: 450px;
+        flex-direction: column;
+    }
+
+    .footer_slogan {
+        align-items: center;
+    }
+    
+    .footer_slogan p {
+        text-align: center;
+    }
+
+    .footer_newsletter {
+        justify-content: center;
+        margin-top: 30px;
+        align-items: center;
+    }
+    
+    .footer_newsletter p{
+        text-align: center;
+    }
+    
+    .footer_support {
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .secondary_footer {
+        margin-top: 20px;
+        max-width: 450px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) { /*CELULARES*/
+    .primary_footer {
+        max-width: 320px;
+        flex-direction: column;
+    }
+
+    .footer_slogan {
+        align-items: center;
+    }
+    
+    .footer_slogan p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .footer_socials a {
+        font-size: 18px;
+    }
+
+    .footer_newsletter {
+        justify-content: center;
+        margin-top: 30px;
+        align-items: center;
+    }
+    
+    .footer-title {
+        font-size: 18px;
+    }
+    
+    .footer_newsletter p{
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .footer_newsletter form .news-input {
+        width: 200px;
+    }
+    
+    .footer_support {
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+       
+    .footer_topics a {
+        font-size: 12px;
+    }
+    
+    .secondary_footer {
+        margin-top: 20px;
+        max-width: 320px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        font-size: 10px;
+    }
+}
