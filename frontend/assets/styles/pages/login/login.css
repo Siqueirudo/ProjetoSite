@@ -96,3 +96,33 @@ main {
     font-size: 16px;
     font-family: 'Montserrat', serif;
 }
+
+@media (min-width: 800px) and (max-width: 1280px) { /*Monitores Menores*/
+    
+}
+
+@media (min-width: 450px) and (max-width: 800px) { /*TABLETS*/
+    .login-container {
+        border-radius: 0px;
+    }
+
+    .login-container a.purple_button,
+    .login-container form .purple_button.register-btn {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 450px) { /*CELULARES*/
+    .login-container {
+        border-radius: 0px;
+    }
+
+    .login-container form .purple_button,
+    .login-container form .purple_button.register-btn {
+        max-width: 100%;
+    }
+
+    .login-container a.purple_button {
+        width: 100%;
+    }
+}

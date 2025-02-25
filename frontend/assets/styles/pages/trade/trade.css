@@ -48,3 +48,38 @@
     font-size: 14px;
 }
 
+@media (min-width: 800px) and (max-width: 1280px) { /*Monitores Menores*/
+
+}
+
+@media (min-width: 450px) and (max-width: 800px) { /*TABLETS*/
+    .trade-title h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .trade-title .purple-line {
+        width: 100px;
+    }
+    
+    .trade-body p {
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 450px) { /*CELULARES*/
+    .trade-title h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .trade-title .purple-line {
+        width: 75px;
+    }
+    
+    .trade-body p {
+        text-align: justify;
+        line-height: 24px;
+        font-size: 12px;
+    }
+}

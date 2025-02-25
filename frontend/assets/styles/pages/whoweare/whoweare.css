@@ -66,3 +66,63 @@
     border: 4px solid #000;
     box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.7), 0 0 16px rgba(0, 0, 0, 0.7);
 }
+
+@media (min-width: 800px) and (max-width: 1280px) { /*Monitores Menores*/
+
+}
+
+@media (min-width: 450px) and (max-width: 800px) { /*TABLETS*/
+    .whoweare-content {
+        padding: 50px 20px;
+    }
+    
+    .whoweare-title h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .whoweare-title .purple-line {
+        width: 100px;
+    }
+
+    .whoweare-body p {
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    .person-desc {
+        font-size: 14px;
+    }
+
+    .person-image {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 450px) { /*CELULARES*/
+    .whoweare-content {
+        padding: 50px 10px;
+    }
+    
+    .whoweare-title h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .whoweare-title .purple-line {
+        width: 75px;
+    }
+
+    .whoweare-body p {
+        line-height: 24px;
+        font-size: 12px;
+    }
+
+    .person-desc {
+        font-size: 12px;
+    }
+
+    .person-image {
+        max-width: 300px;
+    }
+}

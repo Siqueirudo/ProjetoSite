@@ -71,3 +71,65 @@
     font-size: 32px;
     margin-right: 20px;
 }
+
+@media (min-width: 800px) and (max-width: 1280px) { /*Monitores Menores*/
+    
+}
+
+@media (min-width: 450px) and (max-width: 800px) { /*TABLETS*/
+    .contact-content {
+        max-width: 450px;
+        padding: 60px 15px;
+    }
+
+    .contact-title h1 {
+        font-size: 28px;
+    }
+    
+    .contact-title .purple-line {
+        width: 75px;
+    }
+
+    .contact-body p {
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+
+    .contact-body-links a {
+        font-size: 14px;
+    }
+    
+    .contact-body-links i {
+        font-size: 30px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 450px) { /*CELULARES*/
+    .contact-content {
+        max-width: 320px;
+        padding: 60px 15px;
+    }
+
+    .contact-title h1 {
+        font-size: 24px;
+    }
+    
+    .contact-title .purple-line {
+        width: 75px;
+    }
+
+    .contact-body p {
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+
+    .contact-body-links a {
+        font-size: 12px;
+    }
+    
+    .contact-body-links i {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+}
