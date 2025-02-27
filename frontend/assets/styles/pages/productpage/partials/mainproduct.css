@@ -107,3 +107,49 @@
     font-size: 16px;
     color: #333;
 }
+
+@media (min-width: 800px) and (max-width: 1280px) { /*Monitores Menores*/
+
+}
+
+@media (min-width: 450px) and (max-width: 800px) { /*TABLETS*/
+    #mainproduct {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .main-image {
+        text-align: center;
+    }
+    
+    .thumbnails {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 450px) { /*CELULARES*/
+    #mainproduct {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .main-image {
+        text-align: center;
+    }
+    
+    .thumbnails {
+        justify-content: center;
+    }
+    
+    .thumbnails img {
+        width: 60px;
+    }
+    
+    .mainproduct-details h1 {
+        font-size: 22px;
+    }
+    
+    .price {
+        font-size: 20px;
+    }
+}

@@ -100,3 +100,64 @@
     font-weight: 700;
     font-size: 18px;
 }
+
+@media (min-width: 800px) and (max-width: 1280px) { /*Monitores Menores*/
+    .payment-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .payment-form form .input-group {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .payment-item-img {
+        max-height: 125px;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 800px) { /*TABLETS*/
+    .payment-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .payment-form form .input-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .payment-item-details {
+        gap: 20px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) { /*CELULARES*/
+    .payment-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .payment-form form input {
+        font-size: 12px;
+        padding: 10px 
+    }
+
+    .payment-form form .input-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .payment-item-img span {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .payment-item-details {
+        gap: 20px;
+        flex-direction: column;
+    }
+}
